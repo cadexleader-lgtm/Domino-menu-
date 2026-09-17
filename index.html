@@ -155,10 +155,10 @@ footer{margin:28px auto;padding:24px 16px;max-width:1100px}
 .cart-panel,.search-wrap,.menu-tools,.customer-form input,.customer-form textarea{background:var(--surface-strong)!important;color:var(--text)!important;border-color:var(--line)!important}.cart-panel h2,.cart-panel span,.cart-panel label,.cart-panel b{color:var(--text)}.cart-panel input::placeholder,.cart-panel textarea::placeholder,#menuSearch::placeholder{color:var(--text-dim)}
 section.category{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}section.category.visible{opacity:1;transform:translateY(0)}
 header{padding:10px 16px 8px!important;margin-top:8px!important;overflow:hidden;max-height:360px;opacity:1;transform:translateY(0);transition:max-height .55s ease,opacity .4s ease,transform .55s ease,margin .55s ease,padding .55s ease}header .logo-img{max-height:78px!important;margin-bottom:2px!important;animation:dominoHeaderIn .8s cubic-bezier(.2,.8,.2,1) both}header h1{margin:2px 0!important;font-size:clamp(2rem,7vw,3rem)!important}header p{margin:3px auto!important}@keyframes dominoHeaderIn{from{opacity:0;transform:translateY(-18px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}nav.chips{position:sticky!important;top:0!important;padding:8px 12px!important;z-index:21}.menu-tools{top:48px!important;margin:0 auto 4px!important;z-index:20}body.scrolled header{max-height:0!important;opacity:0!important;transform:translateY(-34px)!important;margin-top:0!important;padding-top:0!important;padding-bottom:0!important;border-width:0!important;box-shadow:none!important;pointer-events:none}body.scrolled nav.chips{display:flex!important;position:sticky!important;top:0!important}body.scrolled .menu-tools{position:sticky;top:48px!important}
-.qr-promo{display:flex;align-items:center;justify-content:center;gap:16px;margin:18px auto 4px;padding:12px 16px;max-width:430px;border:1px solid var(--line);border-radius:16px;background:var(--surface-strong);color:var(--text)}.qr-code{width:112px;height:112px;object-fit:contain;border-radius:12px;background:#f5f7fb;padding:5px}.qr-promo strong,.qr-promo span{display:block}.qr-promo span{margin-top:5px;font-size:.8rem;color:var(--text-dim)}
+.qr-promo{display:flex;align-items:center;justify-content:center;gap:16px;margin:18px auto 4px;padding:12px 16px;max-width:520px;border:1px solid var(--line);border-radius:16px;background:var(--surface-strong);color:var(--text)}.qr-code{width:220px;height:220px;object-fit:contain;border-radius:12px;background:#f5f7fb;padding:5px;image-rendering:auto}.qr-promo strong,.qr-promo span{display:block}.qr-promo span{margin-top:5px;font-size:.8rem;color:var(--text-dim)}
 .cart-overlay{align-items:flex-end!important;justify-content:center!important}.cart-panel{width:min(560px,100%)!important;height:auto!important;max-height:86vh!important;border-radius:20px 20px 0 0!important;padding:20px!important}
 .search-hidden{display:none!important}.no-results{padding:28px;text-align:center;color:var(--text-dim);font-weight:700}
-@media(max-width:640px){header{margin:8px 8px 0;padding:14px 10px 10px}section.category{margin:12px 8px 0;padding:14px 12px}.menu-tools{margin:8px 8px 4px;padding:8px;top:4px;flex-wrap:nowrap;gap:6px}.search-wrap{flex:1;min-width:0}.cart-button{width:auto;flex:0 0 auto;padding:0 10px;font-size:.82rem}.cart-button span{display:none}.item{grid-template-columns:minmax(0,1fr) auto;gap:7px}.item-price{grid-column:2;grid-row:1}.add-item{grid-column:1/-1;justify-self:start;padding:7px 9px}.qr-promo{margin-left:8px;margin-right:8px;padding:10px}.qr-code{width:92px;height:92px}}
+@media(max-width:640px){header{margin:8px 8px 0;padding:14px 10px 10px}section.category{margin:12px 8px 0;padding:14px 12px}.menu-tools{margin:8px 8px 4px;padding:8px;top:4px;flex-wrap:nowrap;gap:6px}.search-wrap{flex:1;min-width:0}.cart-button{width:auto;flex:0 0 auto;padding:0 10px;font-size:.82rem}.cart-button span{display:none}.item{grid-template-columns:minmax(0,1fr) auto;gap:7px}.item-price{grid-column:2;grid-row:1}.add-item{grid-column:1/-1;justify-self:start;padding:7px 9px}.qr-promo{margin-left:8px;margin-right:8px;padding:10px}.qr-code{width:150px;height:150px}}
 	</style></head>
 <body>
 <header>
@@ -508,13 +508,10 @@ header{padding:10px 16px 8px!important;margin-top:8px!important;overflow:hidden;
 <div><strong>Ouvrir le menu sur votre téléphone</strong><span>Scannez ce code avec l’appareil photo.</span></div>
 </div>
 <div class="bon-appetit">Bon appétit 🍕</div>
-<div id="qrbox">
-<div id="qrcode"></div>
-<p>Scannez pour retrouver ce menu</p>
-</div>
+
 <p style="margin-top:20px; color:var(--text-dim); font-size:0.8rem;">Domino Express Bénin · Pavés de la Haie Vive · 01 66 18 18 18 · Ouvert 24/24</p>
 <p class="developer-signature">DEV by HAZ DEV · +229 01 41 82 27 30</p></footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
 <script>
   const sections = document.querySelectorAll('section.category');
   if ('IntersectionObserver' in window) {
